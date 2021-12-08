@@ -1,56 +1,36 @@
+# _Find and Replace_
+
+#### By _**Andrew Henderson and Christopher Neal**_
+
 ## Description
 
-This template repository includes a basic setup for using Docker to run RSpec tests, Pry, and Ruby scripts using Ruby 2.6.5. 
+This is a program that lets you search text for a word and replace it with another.
 
-To use Docker, you will first need to [install](https://docs.docker.com/get-docker/) it. Once it's installed, Docker should be open so you can actually run Docker commands in the terminal.
+## Technologies Used
 
-## Running IRB
+* _HTML_
+* _CSS_
+* _Bootstrap_
+* _JavaScript_
+* _JQuery_
 
-You don't need this setup for running IRB (Ruby REPL) by itself. To use IRB on its own, do the following (after Docker is installed and open):
+## Setup/Installation Requirements
 
-```
-$ docker pull ruby:2.6.5
-```
+* _Download and install [Docker](https://docs.docker.com/get-docker/), and leave it open and running_
+* _Clone this repository to your computer_
+* _Run ```$ docker pull ruby:2.6.5``` and ```$ docker run -it ruby:2.6.5 irb```_
+* _Use ```docker-compose down``` and ```docker-compose up --build``` to run the tests_
 
-This pulls down the image of Ruby we use at Epicodus. You only need to do this once.
+## Known Bugs
 
-Once you have it on your machine, you can run IRB with the following command:
+* _There are currently no known bugs_
 
-```
-$ docker run -it ruby:2.6.5 irb
-```
+## License
 
-We recommend creating an alias (called something like `dirb` for Docker IRB) to make the command easier to use.
+_Copyright 2021 Andrew Henderson & Christopher Neal_
 
-You can exit IRB as normal by typing `exit`.
+_Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
 
-## Using This Repository for Docker
+_The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software._
 
-This repository is a template repository. To use it, start by creating a new repository with `ruby-rspec-docker-container` as a template. Clone that repository down to your desktop.
-
-The repository contains a simple project that tests a simple `title_case` method. To run tests on the current code, simply run the command `docker-compose up` in the root directory of this project.
-
-To run tests on your own code, replace the `lib` and `spec` directories with your own source code (for `lib`) and tests (for `spec`).
-
-We recommend creating an alias for the following commands. The alias should look something like this:
-
-```
-dspec ()
-{
-  docker-compose down
-  docker-compose up --build
-  docker-compose run --rm app
-}
-```
-
-With this alias, the `dspec` command will automatically run RSpec tests. You can use `binding.pry` as needed.
-
-### Running Scripts
-
-Running scripts is optional at Epicodus. However, if you want to experiment with it, follow these steps:
-
-* The script must be located in `lib` and be called `script.rb`.
-
-* Run the following command: `docker-compose run --rm app ruby lib/script.rb`.
-
-Once again, we recommend aliasing this command if you plan to run scripts often. If you prefer to name your script something else, you just need to update the command to use the correct path and file name.
+_THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._

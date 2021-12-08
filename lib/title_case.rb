@@ -1,6 +1,13 @@
 class Text
-  def initialize(text)
-    @text = text
+  def initialize(words_or_path)
+    if (File.exist?(words_or_path))
+      file=File.open(words_or_path)
+      data = file.read
+      file.close
+      @text=data
+    else
+      @text = words_or_path
+    end
   end
   def find_and_replace(find, replace)
     words = @text.split("")
